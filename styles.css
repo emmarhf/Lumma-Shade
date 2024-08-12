@@ -162,7 +162,7 @@ body {
 }
 
 .hero {
-    background-image: url('/HERO/HERO.png');
+    background-image: url('HERO/HERO.png');
     background-size: cover;
     background-position: center;
     height: 80vh; /* Ajusta la altura según tus necesidades */
