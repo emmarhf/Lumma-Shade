@@ -162,7 +162,7 @@ body {
 }
 
 .hero {
-    background-image: url('HERO/HERO.png');
+    background-image: url('/HERO/HERO.png');
     background-size: cover;
     background-position: center;
     height: 80vh; /* Ajusta la altura según tus necesidades */
@@ -185,28 +185,29 @@ body {
     box-sizing: border-box;
 }
 
+
 /* Sección Persianas */
-.persianas-section{
+.persianas-section {
+    margin: 20px;
     padding-top: 12px;
 }
 
-/* Button styling */
+/* Estilos de Pestañas (Tabs) */
 .tabs {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-bottom: 12px;
+    margin: 0 auto 20px; /* Centrado con espacio debajo */
     width: 80%;
-    margin: 0 auto; /* Center the buttons */
 }
 
 .tab {
     flex-grow: 1;
     padding: 9px 0;
-    margin: 6px 6px;
+    margin: 6px;
     cursor: pointer;
     background-color: white;
-    color: #00aaff;
+    color: #5e739c;
     text-align: center;
     font-size: 18px;
     border-radius: 6px;
@@ -216,7 +217,7 @@ body {
 }
 
 .tab.active {
-    background-color: #00aaff;
+    background-color: #5e739c;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
@@ -226,42 +227,63 @@ body {
     transform: scale(1.05);
 }
 
-/* Grid styling */
+/* Estilos del Contenido de Pestañas (Tab Content) */
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Estilos de Cuadrícula (Grid) */
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
-    padding: 20px;
+    grid-template-columns: repeat(4, 1fr); /* Máximo 4 columnas */
+    gap: 15px;
     margin-top: 20px;
 }
 
 .grid-item {
-    width: 250px;
-    height: 250px;
-    background-color: #ddd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    color: #fff;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    width: 100%;
+    height: 250px; /* Altura uniforme para los items */
+    overflow: hidden; /* Asegura que no se muestren desbordamientos */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de las Imágenes */
+.grid-item img {
+    width: 100%;
+    height: 100%; /* Para cubrir el contenedor */
+    object-fit: cover; /* Mantiene la proporción y cubre el área */
+    transition: transform 0.3s ease;
 }
 
 .grid-item:hover {
     transform: scale(1.05);
 }
 
-/* Transition and Hover Effects */
-.tab-content {
-    display: none;
+.grid-item img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
 }
 
-/* Specific Grid Colors (Placeholder) */
+/* Colores específicos para cada pestaña (placeholders) */
 #elegancia-content .grid-item { background-color: #f6c2c2; }
 #comodidad-content .grid-item { background-color: #c2f6c2; }
 #privacidad-content .grid-item { background-color: #c2d4f6; }
 #exteriores-content .grid-item { background-color: #f6e9c2; }
 #cortina-tradicional-content .grid-item { background-color: #d3c2f6; }
+
+.persianas-section h2 {
+    font-size: 1.5rem; /* Tamaño de fuente del subtítulo */
+    color: #5e739c; /* Color del texto */
+    margin: 10px 9px; /* Margen superior e inferior */
+    text-align: center; /* Centrado opcional */
+}
+
 
 
 /* Sección de contacto */

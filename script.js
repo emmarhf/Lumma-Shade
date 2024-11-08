@@ -5,12 +5,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const catalogLinks = document.querySelectorAll('.menu-item .dropdown a');
     const contactLinks = document.querySelectorAll('.menu-item.contact .dropdown a');
 
+    // Cambio de pestaña al hacer clic
     tabs.forEach(tab => {
         tab.addEventListener('click', function() {
             activateTab(tab.id);
         });
     });
 
+    // Manejo de enlaces del catálogo
     catalogLinks.forEach(link => {
         link.addEventListener('click', function(event) {
             if (!this.getAttribute('href').includes('.pdf')) {
@@ -22,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    // Manejo de enlaces de contacto
     contactLinks.forEach(link => {
         link.addEventListener('click', function(event) {
             const href = this.getAttribute('href');
@@ -33,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    // Función para activar pestaña
     function activateTab(tabId) {
         tabs.forEach(t => t.classList.remove('active'));
         tabContents.forEach(content => content.style.display = 'none');
