@@ -457,7 +457,7 @@ body {
     position: relative;
     flex-wrap: wrap;
     height: 30%; /* Altura ajustada según la especificación */
-    background-image: url('/Partners/PBG.png'); /* Imagen de fondo */
+    background-image: url('Partners/PBG.png'); /* Imagen de fondo */
     background-size: cover;
     background-position: center;
     color: #ddd;
