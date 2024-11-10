@@ -36,6 +36,17 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    // Manejo de enlaces de "Me interesa" con número de WhatsApp fijo
+const buttonsMeInteresa = document.querySelectorAll('.me-interesa-btn');
+
+buttonsMeInteresa.forEach(button => {
+    button.addEventListener('click', function(event) {
+        const message = this.getAttribute('data-message');
+        const waUrl = `https://wa.me/525591916676?text=${encodeURIComponent(message)}`;
+        window.location.href = waUrl;
+    });
+});
+
     // Función para activar pestaña
     function activateTab(tabId) {
         tabs.forEach(t => t.classList.remove('active'));

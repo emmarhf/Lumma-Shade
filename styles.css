@@ -162,7 +162,7 @@ body {
 }
 
 .hero {
-    background-image: url('HERO/HERO.png');
+    background-image: url('/HERO/HERO.png');
     background-size: cover;
     background-position: center;
     height: 80vh; /* Ajusta la altura según tus necesidades */
@@ -283,6 +283,48 @@ body {
     margin: 10px 9px; /* Margen superior e inferior */
     text-align: center; /* Centrado opcional */
 }
+
+/* Estilo del botón "Me interesa" */
+.me-interesa-btn {
+    width: 100%;
+    height: 100%;
+    background-color: #5e739c; /* Color de fondo */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.me-interesa-btn:hover {
+    background-color: #00aaff; /* Cambio de color al pasar el cursor */
+    transition: 1s;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img, .me-interesa-btn {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* Asegura que las imágenes y el botón ocupen el área completa */
+}
+
+
 
 
 
@@ -457,7 +499,7 @@ body {
     position: relative;
     flex-wrap: wrap;
     height: 30%; /* Altura ajustada según la especificación */
-    background-image: url('Partners/PBG.png'); /* Imagen de fondo */
+    background-image: url('/Partners/PBG.png'); /* Imagen de fondo */
     background-size: cover;
     background-position: center;
     color: #ddd;
